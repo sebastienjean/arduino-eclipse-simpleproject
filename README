@@ -1,0 +1,15 @@
+This is a simple project using Eclipse to develop for Arduino platforms.
+
+It has been tested using 
+- Eclipse Juno
+- ArduinoIDE v1.0.2 toolchain and source files
+- AVR eclipse plugin v2.4.0
+
+Blink example has been tested on Mega (AT2560) and Nano (AT328P) platforms.
+
+This project is originally a fork of https://github.com/ricovangenugten/Arduino-Blink-Eclipse-Project, but has been refactored and now lives on its own.
+
+For installation steps, see wiki pages (under construction for the moment)
+
+
+Feel free to contact me for any question.
