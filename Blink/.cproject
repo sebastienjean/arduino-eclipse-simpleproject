@@ -22,9 +22,9 @@
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.objcopy.eeprom.app.release.1628975315" name="Generate HEX file for EEPROM" superClass="de.innot.avreclipse.toolchain.options.toolchain.objcopy.eeprom.app.release" value="false" valueType="boolean"/>
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.objdump.app.release.1413191423" name="Generate Extended Listing (Source + generated Assembler)" superClass="de.innot.avreclipse.toolchain.options.toolchain.objdump.app.release" value="false" valueType="boolean"/>
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.size.app.release.1980389804" name="Print Size" superClass="de.innot.avreclipse.toolchain.options.toolchain.size.app.release"/>
-							<option id="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.release.905619393" name="AVRDude" superClass="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.release"/>
+							<option id="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.release.905619393" name="AVRDude" superClass="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.release" value="false" valueType="boolean"/>
 							<targetPlatform id="de.innot.avreclipse.targetplatform.winavr.app.release.565884774" name="AVR Cross-Target" superClass="de.innot.avreclipse.targetplatform.winavr.app.release"/>
-							<builder buildPath="${workspace_loc:/FuelCellBikeController/Release}" id="de.innot.avreclipse.target.builder.winavr.app.release.159260336" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="AVR GNU Make Builder" superClass="de.innot.avreclipse.target.builder.winavr.app.release"/>
+							<builder buildPath="${project_loc:/Nano328P}" id="de.innot.avreclipse.target.builder.winavr.app.release.159260336" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="AVR GNU Make Builder" superClass="de.innot.avreclipse.target.builder.winavr.app.release"/>
 							<tool id="de.innot.avreclipse.tool.assembler.winavr.app.release.913056500" name="AVR Assembler" superClass="de.innot.avreclipse.tool.assembler.winavr.app.release">
 								<option id="de.innot.avreclipse.assembler.option.debug.level.1720784653" name="Generate Debugging Info" superClass="de.innot.avreclipse.assembler.option.debug.level" value="de.innot.avreclipse.assembler.option.debug.level.none" valueType="enumerated"/>
 								<inputType id="de.innot.avreclipse.tool.assembler.input.1206529232" superClass="de.innot.avreclipse.tool.assembler.input"/>
@@ -40,7 +40,7 @@
 								<option id="de.innot.avreclipse.compiler.option.std.593601580" name="Language Standard" superClass="de.innot.avreclipse.compiler.option.std" value="de.innot.avreclipse.compiler.option.std.default" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.compiler.option.language.uchar.1396882986" name="char is unsigned (-funsigned-char)" superClass="de.innot.avreclipse.compiler.option.language.uchar" value="false" valueType="boolean"/>
 								<option id="de.innot.avreclipse.compiler.option.language.ubitfields.2129628915" name="bitfields are unsigned (-funsigned-bitfields)" superClass="de.innot.avreclipse.compiler.option.language.ubitfields" value="false" valueType="boolean"/>
-								<option id="de.innot.avreclipse.compiler.option.otherflags.653832828" name="Other flags" superClass="de.innot.avreclipse.compiler.option.otherflags" value="" valueType="string"/>
+								<option id="de.innot.avreclipse.compiler.option.otherflags.653832828" name="Other flags" superClass="de.innot.avreclipse.compiler.option.otherflags" value="-DARDUINO=100" valueType="string"/>
 								<option id="de.innot.avreclipse.compiler.option.incpath.473261528" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/srcCore}&quot;"/>
@@ -64,7 +64,7 @@
 								<option id="de.innot.avreclipse.cppcompiler.option.language.uchar.141229132" name="char is unsigned (-funsigned-char)" superClass="de.innot.avreclipse.cppcompiler.option.language.uchar" value="false" valueType="boolean"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.language.ubitfields.335933703" name="bitfields are unsigned (-funsigned-bitfields)" superClass="de.innot.avreclipse.cppcompiler.option.language.ubitfields" value="false" valueType="boolean"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.language.noexceptions.1120780068" name="Do not use Exceptions (-fno-exceptions)" superClass="de.innot.avreclipse.cppcompiler.option.language.noexceptions" value="true" valueType="boolean"/>
-								<option id="de.innot.avreclipse.cppcompiler.option.otherflags.1000007143" name="Other flags" superClass="de.innot.avreclipse.cppcompiler.option.otherflags" value="" valueType="string"/>
+								<option id="de.innot.avreclipse.cppcompiler.option.otherflags.1000007143" name="Other flags" superClass="de.innot.avreclipse.cppcompiler.option.otherflags" value="-DARDUINO=100" valueType="string"/>
 								<inputType id="de.innot.avreclipse.cppcompiler.input.1930716152" superClass="de.innot.avreclipse.cppcompiler.input"/>
 							</tool>
 							<tool id="de.innot.avreclipse.tool.linker.winavr.app.release.631265850" name="AVR C Linker" superClass="de.innot.avreclipse.tool.linker.winavr.app.release"/>
@@ -85,12 +85,16 @@
 							<tool id="de.innot.avreclipse.tool.objcopy.flash.winavr.app.release.222794462" name="AVR Create Flash image" superClass="de.innot.avreclipse.tool.objcopy.flash.winavr.app.release"/>
 							<tool id="de.innot.avreclipse.tool.objcopy.eeprom.winavr.app.release.618251864" name="AVR Create EEPROM image" superClass="de.innot.avreclipse.tool.objcopy.eeprom.winavr.app.release"/>
 							<tool id="de.innot.avreclipse.tool.size.winavr.app.release.2003901738" name="Print Size" superClass="de.innot.avreclipse.tool.size.winavr.app.release"/>
-							<tool id="de.innot.avreclipse.tool.avrdude.app.release.1526736791" name="AVRDude" superClass="de.innot.avreclipse.tool.avrdude.app.release"/>
+							<tool commandLinePattern="${COMMAND} ${FLAGS} " id="de.innot.avreclipse.tool.avrdude.app.release.1526736791" name="AVRDude" superClass="de.innot.avreclipse.tool.avrdude.app.release"/>
 						</toolChain>
 					</folderInfo>
 				</configuration>
 			</storageModule>
-			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
+				<externalSettings containerId="ArduinoCore;de.innot.avreclipse.configuration.app.release.1602708466.774561309" factoryId="org.eclipse.cdt.core.cfg.export.settings.sipplier">
+					<externalSetting/>
+				</externalSettings>
+			</storageModule>
 		</cconfiguration>
 		<cconfiguration id="de.innot.avreclipse.configuration.app.release.1602708466.804897449">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="de.innot.avreclipse.configuration.app.release.1602708466.804897449" moduleId="org.eclipse.cdt.core.settings" name="Mega2560">
@@ -113,7 +117,7 @@
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.size.app.release.805736954" name="Print Size" superClass="de.innot.avreclipse.toolchain.options.toolchain.size.app.release"/>
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.release.1918181306" name="AVRDude" superClass="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.release" value="false" valueType="boolean"/>
 							<targetPlatform id="de.innot.avreclipse.targetplatform.winavr.app.release.771410595" name="AVR Cross-Target" superClass="de.innot.avreclipse.targetplatform.winavr.app.release"/>
-							<builder buildPath="${workspace_loc:/FuelCellBikeController/Release}" id="de.innot.avreclipse.target.builder.winavr.app.release.976203015" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="AVR GNU Make Builder" superClass="de.innot.avreclipse.target.builder.winavr.app.release"/>
+							<builder buildPath="${project_loc:/Mega2560}" id="de.innot.avreclipse.target.builder.winavr.app.release.976203015" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="AVR GNU Make Builder" superClass="de.innot.avreclipse.target.builder.winavr.app.release"/>
 							<tool id="de.innot.avreclipse.tool.assembler.winavr.app.release.51937626" name="AVR Assembler" superClass="de.innot.avreclipse.tool.assembler.winavr.app.release">
 								<option id="de.innot.avreclipse.assembler.option.debug.level.787428059" name="Generate Debugging Info" superClass="de.innot.avreclipse.assembler.option.debug.level" value="de.innot.avreclipse.assembler.option.debug.level.none" valueType="enumerated"/>
 								<inputType id="de.innot.avreclipse.tool.assembler.input.1823132180" superClass="de.innot.avreclipse.tool.assembler.input"/>
@@ -129,8 +133,9 @@
 								<option id="de.innot.avreclipse.compiler.option.std.473624045" name="Language Standard" superClass="de.innot.avreclipse.compiler.option.std" value="de.innot.avreclipse.compiler.option.std.default" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.compiler.option.language.uchar.646099676" name="char is unsigned (-funsigned-char)" superClass="de.innot.avreclipse.compiler.option.language.uchar" value="false" valueType="boolean"/>
 								<option id="de.innot.avreclipse.compiler.option.language.ubitfields.592992430" name="bitfields are unsigned (-funsigned-bitfields)" superClass="de.innot.avreclipse.compiler.option.language.ubitfields" value="false" valueType="boolean"/>
-								<option id="de.innot.avreclipse.compiler.option.otherflags.207000914" name="Other flags" superClass="de.innot.avreclipse.compiler.option.otherflags" value="" valueType="string"/>
+								<option id="de.innot.avreclipse.compiler.option.otherflags.207000914" name="Other flags" superClass="de.innot.avreclipse.compiler.option.otherflags" value="-DARDUINO=100" valueType="string"/>
 								<option id="de.innot.avreclipse.compiler.option.incpath.275704706" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}}"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/srcCore}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/srcVariants/mega}&quot;"/>
 								</option>
@@ -140,6 +145,7 @@
 								<option id="de.innot.avreclipse.cppcompiler.option.debug.level.1498957707" name="Generate Debugging Info" superClass="de.innot.avreclipse.cppcompiler.option.debug.level" value="de.innot.avreclipse.cppcompiler.option.debug.level.none" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.753949900" name="Optimization Level" superClass="de.innot.avreclipse.cppcompiler.option.optimize" value="de.innot.avreclipse.cppcompiler.optimize.size" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.incpath.1305056388" name="Include Paths (-I)" superClass="de.innot.avreclipse.cppcompiler.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/srcCore}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/srcVariants/mega}&quot;"/>
 								</option>
@@ -151,7 +157,7 @@
 								<option id="de.innot.avreclipse.cppcompiler.option.language.uchar.441765121" name="char is unsigned (-funsigned-char)" superClass="de.innot.avreclipse.cppcompiler.option.language.uchar" value="false" valueType="boolean"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.language.ubitfields.642405565" name="bitfields are unsigned (-funsigned-bitfields)" superClass="de.innot.avreclipse.cppcompiler.option.language.ubitfields" value="false" valueType="boolean"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.language.noexceptions.222582016" name="Do not use Exceptions (-fno-exceptions)" superClass="de.innot.avreclipse.cppcompiler.option.language.noexceptions" value="true" valueType="boolean"/>
-								<option id="de.innot.avreclipse.cppcompiler.option.otherflags.1973294874" name="Other flags" superClass="de.innot.avreclipse.cppcompiler.option.otherflags" value="" valueType="string"/>
+								<option id="de.innot.avreclipse.cppcompiler.option.otherflags.1973294874" name="Other flags" superClass="de.innot.avreclipse.cppcompiler.option.otherflags" value="-DARDUINO=100" valueType="string"/>
 								<inputType id="de.innot.avreclipse.cppcompiler.input.1990773542" superClass="de.innot.avreclipse.cppcompiler.input"/>
 							</tool>
 							<tool id="de.innot.avreclipse.tool.linker.winavr.app.release.505305034" name="AVR C Linker" superClass="de.innot.avreclipse.tool.linker.winavr.app.release"/>
@@ -180,18 +186,14 @@
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 	</storageModule>
-	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="FuelCellBikeController.de.innot.avreclipse.project.winavr.elf_2.1.0.1454520998" name="AVR Cross Target Application" projectType="de.innot.avreclipse.project.winavr.elf_2.1.0"/>
-	</storageModule>
-	<storageModule moduleId="refreshScope" versionNumber="2">
-		<configuration configurationName="Release">
-			<resource resourceType="PROJECT" workspacePath="/FuelCellBikeController"/>
-		</configuration>
+		<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Nano328P">
 			<resource resourceType="PROJECT" workspacePath="/Blink"/>
+			<resource resourceType="PROJECT" workspacePath="/ArduinoCore"/>
 		</configuration>
 		<configuration configurationName="Mega2560">
 			<resource resourceType="PROJECT" workspacePath="/Blink"/>
+			<resource resourceType="PROJECT" workspacePath="/ArduinoCore"/>
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
@@ -218,13 +220,10 @@
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1602708466.988798742;de.innot.avreclipse.configuration.app.release.1602708466.988798742.;de.innot.avreclipse.tool.compiler.winavr.app.release.18150488;de.innot.avreclipse.compiler.winavr.input.734436418">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1602708466;de.innot.avreclipse.configuration.app.release.1602708466.;de.innot.avreclipse.tool.cppcompiler.app.release.1068200909;de.innot.avreclipse.cppcompiler.input.1469960720">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileCPP"/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1602708466.988798742;de.innot.avreclipse.configuration.app.release.1602708466.988798742.;de.innot.avreclipse.tool.cppcompiler.app.release.1906601648;de.innot.avreclipse.cppcompiler.input.1930716152">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileCPP"/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1602708466.804897449;de.innot.avreclipse.configuration.app.release.1602708466.804897449.;de.innot.avreclipse.tool.cppcompiler.app.release.601018;de.innot.avreclipse.cppcompiler.input.1990773542">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1602708466.804897449;de.innot.avreclipse.configuration.app.release.1602708466.804897449.;de.innot.avreclipse.tool.compiler.winavr.app.release.852718022;de.innot.avreclipse.compiler.winavr.input.1649105757">
@@ -233,8 +232,11 @@
 		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1602708466;de.innot.avreclipse.configuration.app.release.1602708466.;de.innot.avreclipse.tool.compiler.winavr.app.release.894148084;de.innot.avreclipse.compiler.winavr.input.84295540">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1602708466.988798742;de.innot.avreclipse.configuration.app.release.1602708466.988798742.;de.innot.avreclipse.tool.compiler.winavr.app.release.18150488;de.innot.avreclipse.compiler.winavr.input.734436418">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
+		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1602708466.988798742;de.innot.avreclipse.configuration.app.release.1602708466.988798742.;de.innot.avreclipse.tool.cppcompiler.app.release.1906601648;de.innot.avreclipse.cppcompiler.input.1930716152">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileCPP"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1602708466.804897449;de.innot.avreclipse.configuration.app.release.1602708466.804897449.;de.innot.avreclipse.tool.cppcompiler.app.release.601018;de.innot.avreclipse.cppcompiler.input.1990773542">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
 	</storageModule>
 </cproject>
