@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?fileVersion 4.0.0?>
-
-<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
 		<cconfiguration id="de.innot.avreclipse.configuration.app.release.1602708466.988798742">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="de.innot.avreclipse.configuration.app.release.1602708466.988798742" moduleId="org.eclipse.cdt.core.settings" name="Nano328P">
@@ -186,7 +184,7 @@
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 	</storageModule>
-		<storageModule moduleId="refreshScope" versionNumber="2">
+	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Nano328P">
 			<resource resourceType="PROJECT" workspacePath="/Blink"/>
 			<resource resourceType="PROJECT" workspacePath="/ArduinoCore"/>
@@ -238,5 +236,8 @@
 		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1602708466.804897449;de.innot.avreclipse.configuration.app.release.1602708466.804897449.;de.innot.avreclipse.tool.cppcompiler.app.release.601018;de.innot.avreclipse.cppcompiler.input.1990773542">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="Blink.null.222724301" name="Blink"/>
 	</storageModule>
 </cproject>
